@@ -28,7 +28,7 @@ export const APIProvider: FunctionComponent<{}> = ({ children }) => {
 
     useEffect(() => {
         async function loadData() {
-            const response = await fetch('/api_mock/locations.json');
+            const response = await fetch('./api_mock/locations.json');
             const data = await response.json();
             setState(data);
         }

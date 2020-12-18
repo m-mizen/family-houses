@@ -77,7 +77,7 @@ export const LocationDetailsTitleEle = styled.h2`
 
 export const TagsEle = styled.div`
     display: flex;
-    gap: 0.1em;
+    gap: 0.25em;
 `;
 
 export const TagEle = styled.span`

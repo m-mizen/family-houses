@@ -6,7 +6,7 @@ export const StoreFinderContainer = styled.div`
     display: block;
     @media screen and (min-width: 900px) {
         display:grid;
-        grid-template-rows: minmax(4em, max-content) 1fr;
+        grid-template-rows: auto 1fr;
         grid-template-columns: 3fr 5fr;
         height: 100vh;
     }

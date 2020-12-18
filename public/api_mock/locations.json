@@ -23,7 +23,7 @@
   ],
   "locations": [
     {
-      "id": "a1",
+      "id": "location-1",
       "name": "Brian Dowding Court",
       "address": "redacted",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam augue libero, congue vel pretium at, pharetra eu ante. Aliquam bibendum semper orci eget aliquam. Vivamus bibendum posuere felis sit amet volutpat.",
@@ -32,7 +32,7 @@
       "tags": ["current", "mark"]
     },
     {
-      "id": "a2",
+      "id": "location-2",
       "name": "Shepherds Way",
       "address": "10 Shepherds Way \nCrowthorne \nBerkshire \nRG456AJ",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam augue libero, congue vel pretium at, pharetra eu ante. Aliquam bibendum semper orci eget aliquam. Vivamus bibendum posuere felis sit amet volutpat.",
@@ -41,16 +41,16 @@
       "tags": ["mum", "mark", "sean"]
     },
     {
-      "id": "a3",
-      "name": "Maddingly",
-      "address": "address goes here",
+      "id": "location-3",
+      "name": "Madingley",
+      "address": "redacted",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam augue libero, congue vel pretium at, pharetra eu ante. Aliquam bibendum semper orci eget aliquam. Vivamus bibendum posuere felis sit amet volutpat.",
       "lat": 51.3884258,
       "lng": -0.7543533,
       "tags": ["current", "dad", "mark", "sean"]
     },
     {
-      "id": "a4",
+      "id": "location-4",
       "name": "Eddington Rd.",
       "address": "27 Eddington Road \nBracknell \nBerkshire \nRG12 8GF",
       "description": "This is the road that I lived with Mum until moving out of Brancknell to Crowthorne",
@@ -59,7 +59,7 @@
       "tags": ["mum", "mark", "sean"]
     },
     {
-      "id": "a5",
+      "id": "location-5",
       "name": "Wheatley",
       "address": "11 Wheatley \nBracknell \nBerkshire \nRG12 8UF",
       "description": "Lorem ipsum ...",
@@ -68,7 +68,7 @@
       "tags": ["mum", "mark", "sean"]
     },
     {
-      "id": "a6",
+      "id": "location-6",
       "name": "Nutley",
       "address": "31 Nutley \nBracknell \nBerkshire \nRG12 7HE",
       "description": "Lorem ipsum ...",
@@ -77,7 +77,7 @@
       "tags": ["mum", "mark", "sean"]
     },
     {
-      "id": "a7",
+      "id": "location-7",
       "name": "Sarum",
       "address": "5 Sarum \nBracknell \nBerkshire \nRG12 8XZ",
       "description": "Lorem ipsum ...",

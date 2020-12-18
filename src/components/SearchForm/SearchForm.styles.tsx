@@ -6,11 +6,19 @@ export const FormEle = styled.form`
     margin: auto;
 `;
 
-export const BtnEle = styled.button`
+export const BtnWrapEle = styled.div`
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    gap: .5em;
+    margin: .75em 0 0;
+`;
+
+export const BtnEle = styled.button<{ type: string }>`
     flex: 0 1 auto;
     background: none;
     color: #d59563;
-    font-size: 75%;
+    font-size: 60%;
     border: 2px solid #d59563;
     border-radius: 6px;
     padding: 0.25em .5em;
@@ -20,9 +28,26 @@ export const BtnEle = styled.button`
         background-color: #d59563;
         color: #333;
     }
-    & + & {
-        margin-left: .5em;
-    }
+
+    ${props => props?.type === 'reset' && `
+        color: #ff7043;
+        border-color: #ff7043;
+        &:hover, &:focus {
+            border-color: #ff7043;
+            background-color: #ff7043;
+            color: #333;
+        }
+    `}
+    
+    ${props => props?.type === 'submit' && `
+        border-color: #d59563;
+        background-color: #d59563;
+        color: #333;
+        &:hover, &:focus {
+            border-color: #fff;
+            background-color: #fff;
+        }
+    `}
 `;
 
 export const LabelEle = styled.label`

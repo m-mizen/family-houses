@@ -1,7 +1,7 @@
 import { useState, FunctionComponent, SyntheticEvent, ChangeEvent, useContext } from 'react';
 import { ActiveLocationContext, APIContext, APILocation, LocationsFilteredContext } from '../../context';
 
-import { FormEle, LabelEle, LabelTextEle, SelectEle, InputTextEle, BtnEle } from './SearchForm.styles';
+import { FormEle, LabelEle, LabelTextEle, SelectEle, InputTextEle, BtnEle, BtnWrapEle } from './SearchForm.styles';
 
 export const SearchForm: FunctionComponent<{}> = () => {
 
@@ -91,8 +91,10 @@ export const SearchForm: FunctionComponent<{}> = () => {
                 </SelectEle>
             </LabelEle>
 
-            <BtnEle type="submit">Submit</BtnEle>
-            <BtnEle type="reset" onClick={handleReset}>Reset</BtnEle>
+            <BtnWrapEle>
+                <BtnEle type="submit">Submit</BtnEle>
+                <BtnEle type="reset" onClick={handleReset}>Reset</BtnEle>
+            </BtnWrapEle>
         </FormEle>
     )
 }
