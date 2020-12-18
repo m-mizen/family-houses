@@ -2,6 +2,7 @@
   "name": "store-finder",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://m-mizen.github.io/family-houses",
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.11.1",
     "@testing-library/jest-dom": "^5.11.4",
@@ -22,7 +23,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -44,6 +47,7 @@
   },
   "devDependencies": {
     "@types/googlemaps": "^3.40.5",
-    "@types/styled-components": "^5.1.5"
+    "@types/styled-components": "^5.1.5",
+    "gh-pages": "^3.1.0"
   }
 }
