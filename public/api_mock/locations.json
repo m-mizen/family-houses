@@ -61,7 +61,7 @@
     {
       "id": "location-5",
       "name": "32 Wheatley",
-      "address": "11 Wheatley \nBracknell \nBerkshire \nRG12 8UF",
+      "address": "32 Wheatley \nBracknell \nBerkshire \nRG12 8UF",
       "description": "Lorem ipsum ...",
       "lat": 51.401928,
       "lng": -0.776137,
@@ -70,7 +70,7 @@
     {
       "id": "location-6",
       "name": "53 Nutley",
-      "address": "31 Nutley \nBracknell \nBerkshire \nRG12 7HE",
+      "address": "53 Nutley \nBracknell \nBerkshire \nRG12 7HE",
       "description": "Lorem ipsum ...",
       "lat": 51.38992118019217,
       "lng": -0.7586246463058398,
