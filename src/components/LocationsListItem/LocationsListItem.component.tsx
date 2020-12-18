@@ -33,10 +33,12 @@ export const LocationsListItem: FunctionComponent<LocationsListItemProps> = ({ l
                         <LocationDetailsTitleEle>Description</LocationDetailsTitleEle>
                         {description}
                     </LocationDetailsPartEle>
-                    <LocationDetailsPartEle>
-                        <LocationDetailsTitleEle>Address</LocationDetailsTitleEle>
-                        <LocationAddressEle>{address}</LocationAddressEle>
-                    </LocationDetailsPartEle>
+                    {address && address !== 'redacted' &&
+                        <LocationDetailsPartEle>
+                            <LocationDetailsTitleEle>Address</LocationDetailsTitleEle>
+                            <LocationAddressEle>{address}</LocationAddressEle>
+                        </LocationDetailsPartEle>
+                    }
                 </LocationDetailsEle>}
         </LocationEle>
     );
