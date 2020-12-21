@@ -1,4 +1,4 @@
-import { FunctionComponent, useState, useRef, useEffect, useContext, useCallback } from "react";
+import { FunctionComponent, useState, useRef, useEffect, useContext } from "react";
 import { GoogleMapsContext, LocationsFilteredContext } from "../../context";
 import { ActiveLocationContext } from "../../context";
 
