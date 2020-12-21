@@ -58,6 +58,7 @@ export const LabelEle = styled.label`
     margin: .5em 0;
     input, select {
         flex: 1 1 auto;
+        width: 100%;
     }
 `;
 

@@ -1,4 +1,4 @@
-import { FunctionComponent, useState, useRef, useEffect, useContext } from "react";
+import { FunctionComponent, useState, useRef, useEffect, useContext, useCallback } from "react";
 import { GoogleMapsContext, LocationsFilteredContext } from "../../context";
 import { ActiveLocationContext } from "../../context";
 
@@ -31,6 +31,13 @@ export const Map: FunctionComponent<{}> = () => {
         if (!map) {
             return;
         }
+        if (markers && filteredLocations && markers.length === filteredLocations.length) {
+            return;
+        }
+
+        markers?.forEach(marker => {
+            marker.setMap(null);
+        });
 
         const newMarkers = filteredLocations?.map((location) => {
             const { lat, lng } = location;
@@ -43,7 +50,7 @@ export const Map: FunctionComponent<{}> = () => {
         });
 
         setMarkers(newMarkers);
-    }, [map, filteredLocations]);
+    }, [map, filteredLocations, setMarkers, markers]);
 
 
     useEffect(() => {
@@ -52,16 +59,24 @@ export const Map: FunctionComponent<{}> = () => {
         }
 
         const bounds = new google.maps.LatLngBounds();
-        markers.forEach(marker => {
-            const position = marker.getPosition();
-            if (!position) {
-                return;
-            }
-            bounds.extend(position);
-        });
 
-        map.fitBounds(bounds);
-        map.setZoom(Math.min(map.getZoom() - 1, 15));
+        if (markers?.length > 0) {
+            markers.forEach(marker => {
+                const position = marker.getPosition();
+                if (!position) {
+                    return;
+                }
+                bounds.extend(position);
+            });
+            map.fitBounds(bounds);
+            map.setZoom(Math.min(map.getZoom() - 1, 15));
+        } else {
+            map.setZoom(8);
+            map.panTo({
+                lat: 51.51403184993422,
+                lng: -0.1270110922311092
+            });
+        }
 
         markers.forEach((marker, index) => {
             marker.addListener('click', (e) => {
@@ -73,7 +88,7 @@ export const Map: FunctionComponent<{}> = () => {
         });
 
         return () => {
-            markers.forEach((marker) => {
+            markers?.forEach((marker) => {
                 google.maps.event.clearInstanceListeners(marker);
             });
         };
@@ -96,7 +111,7 @@ export const Map: FunctionComponent<{}> = () => {
 
         if (position) {
             map.panTo(position);
-            if(map.getZoom() < 12) {
+            if (map.getZoom() < 12) {
                 map.setZoom(12)
             }
         }
