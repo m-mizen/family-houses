@@ -21,6 +21,16 @@
       "name": "Sean"
     }
   ],
+  "countries": [
+    {
+      "id": "gbr",
+      "name": "Great Britain"
+    },
+    {
+      "id": "aus",
+      "name": "Australia"
+    }
+  ],
   "locations": [
     {
       "id": "location-1",
@@ -29,7 +39,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam augue libero, congue vel pretium at, pharetra eu ante. Aliquam bibendum semper orci eget aliquam. Vivamus bibendum posuere felis sit amet volutpat.",
       "lat": 51.4520422,
       "lng": -1.0548024,
-      "tags": ["current", "mark"]
+      "tags": ["current", "mark"],
+      "country": "gbr"
     },
     {
       "id": "location-2",
@@ -38,7 +49,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam augue libero, congue vel pretium at, pharetra eu ante. Aliquam bibendum semper orci eget aliquam. Vivamus bibendum posuere felis sit amet volutpat.",
       "lat": 51.3678749,
       "lng": -0.822363,
-      "tags": ["mum", "mark", "sean"]
+      "tags": ["mum", "mark", "sean"],
+      "country": "gbr"
     },
     {
       "id": "location-3",
@@ -47,7 +59,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam augue libero, congue vel pretium at, pharetra eu ante. Aliquam bibendum semper orci eget aliquam. Vivamus bibendum posuere felis sit amet volutpat.",
       "lat": 51.3884258,
       "lng": -0.7543533,
-      "tags": ["current", "dad", "mark", "sean"]
+      "tags": ["current", "dad", "mark", "sean"],
+      "country": "gbr"
     },
     {
       "id": "location-4",
@@ -56,7 +69,8 @@
       "description": "This is the road that I lived with Mum until moving out of Brancknell to Crowthorne",
       "lat": 51.39865409973062,
       "lng": -0.777133330078677,
-      "tags": ["mum", "mark", "sean"]
+      "tags": ["mum", "mark", "sean"],
+      "country": "gbr"
     },
     {
       "id": "location-5",
@@ -65,7 +79,8 @@
       "description": "Lorem ipsum ...",
       "lat": 51.401928,
       "lng": -0.776137,
-      "tags": ["mum", "mark", "sean"]
+      "tags": ["mum", "mark", "sean"],
+      "country": "gbr"
     },
     {
       "id": "location-6",
@@ -74,7 +89,8 @@
       "description": "Lorem ipsum ...",
       "lat": 51.38992118019217,
       "lng": -0.7586246463058398,
-      "tags": ["mum", "mark", "sean"]
+      "tags": ["mum", "mark", "sean"],
+      "country": "gbr"
     },
     {
       "id": "location-7",
@@ -83,7 +99,8 @@
       "description": "Lorem ipsum ...",
       "lat": 51.389103818377684,
       "lng": -0.773089170700939,
-      "tags": ["mum", "dad", "mark", "sean"]
+      "tags": ["mum", "dad", "mark", "sean"],
+      "country": "gbr"
     }, 
     {
       "id": "location-8",
@@ -92,7 +109,8 @@
       "description": "",
       "lat": 51.50743681296977,
       "lng": -0.059635443900863255,
-      "tags": ["mum", "dad"]
+      "tags": ["mum", "dad"],
+      "country": "gbr"
     },
     {
       "id": "location-9",
@@ -101,7 +119,8 @@
       "description": "",
       "lat": 51.45316832258713,
       "lng": -0.2163433371557576,
-      "tags": ["mum", "dad"]
+      "tags": ["mum", "dad"],
+      "country": "gbr"
     },
     {
       "id": "location-10",
@@ -110,7 +129,8 @@
       "description": "",
       "lat": 52.66874212281879, 
       "lng": 1.301053513801964,
-      "tags": ["mum", "dad"]
+      "tags": ["mum", "dad"],
+      "country": "gbr"
     }, 
     {
       "id": "location-11",
@@ -119,7 +139,8 @@
       "description": "",
       "lat": 51.281646350098576, 
       "lng": -0.9583297997287227,
-      "tags": ["mum", "dad"]
+      "tags": ["mum", "dad"],
+      "country": "gbr"
     },
     {
       "id": "location-12",
@@ -128,7 +149,8 @@
       "description": "",
       "lat": 51.004143138487436, 
       "lng": -0.10794265768082335,
-      "tags": ["mum", "dad"]
+      "tags": ["mum", "dad"],
+      "country": "gbr"
     },
     {
       "id": "location-13",
@@ -137,7 +159,8 @@
       "description": "",
       "lat": 51.10475254880887,
       "lng": -0.1944408150760213,
-      "tags": ["mum", "dad"]
+      "tags": ["mum", "dad"],
+      "country": "gbr"
     },
     {
       "id": "location-14",
@@ -146,7 +169,8 @@
       "description": "",
       "lat": 51.455587228643495,
       "lng": -0.14119477273788467,
-      "tags": ["mum", "dad"]
+      "tags": ["mum", "dad"],
+      "country": "gbr"
     },
     {
       "id": "location-15",
@@ -155,7 +179,8 @@
       "description": "",
       "lat": 51.39854609559944,
       "lng": -0.7763743337372224,
-      "tags": ["mum", "dad", "mark", "sean"]
+      "tags": ["mum", "dad", "mark", "sean"],
+      "country": "gbr"
     },
     {
       "id": "location-16",
@@ -164,7 +189,8 @@
       "description": "",
       "lat": 51.637642546642276,
       "lng": 0.4353494849383098,
-      "tags": ["mum", "dad", "mark", "sean"]
+      "tags": ["mum", "dad", "mark", "sean"],
+      "country": "gbr"
     },
     {
       "id": "location-17",
@@ -173,7 +199,8 @@
       "description": "",
       "lat": 51.6331111071508, 
       "lng": 0.4083393579520044,
-      "tags": ["mum", "dad", "mark"]
+      "tags": ["mum", "dad", "mark"],
+      "country": "gbr"
     },
     {
       "id": "location-18",
@@ -182,7 +209,8 @@
       "description": "",
       "lat": 51.6331111071508, 
       "lng": 0.4083393579520044,
-      "tags": ["mum", "dad", "mark"]
+      "tags": ["mum", "dad", "mark"],
+      "country": "gbr"
     },
     {
       "id": "location-19",
@@ -191,7 +219,8 @@
       "description": "",
       "lat": 51.296065906153466, 
       "lng": 0.16566025424400146,
-      "tags": ["dad", "mark", "sean"]
+      "tags": ["dad", "mark", "sean"],
+      "country": "gbr"
     },
     {
       "id": "location-20",
@@ -200,7 +229,8 @@
       "description": "",
       "lat": 51.46235238289415, 
       "lng": -0.16503311506642948,
-      "tags": ["dad", "mark", "sean"]
+      "tags": ["dad", "mark", "sean"],
+      "country": "gbr"
     },
     {
       "id": "location-21",
@@ -209,7 +239,18 @@
       "description": "",
       "lat": 51.38359021418994, 
       "lng": -0.09317263041111003,
-      "tags": ["dad"]
+      "tags": ["dad"],
+      "country": "gbr"
+    },
+    {
+      "id": "location-22",
+      "name": "Moore Street",
+      "address": "1/23 Moore Street\nCoogee\nNSW\n2034\nAUSTRALIA",
+      "description": "",
+      "lat": -33.91642350383712,  
+      "lng": 151.2605094271177,
+      "tags": ["mum", "dad"],
+      "country": "aus"
     }
   ]
 }

@@ -4,20 +4,27 @@ export interface APILocation {
     description: string;
     name: string;
     id: string;
-    lat: number,
-    lng: number,
-    address: string,
-    tags?: string[]
+    lat: number;
+    lng: number;
+    address: string;
+    tags?: string[];
+    country: string;
 }
 
 export interface APITag {
-    id: string,
-    name: string
+    id: string;
+    name: string;
+}
+
+export interface APICountry {
+    id: string;
+    name: string;
 }
 
 export interface APIContextType {
-    locations: APILocation[],
-    tags: APITag[]
+    locations: APILocation[];
+    tags: APITag[];
+    countries: APICountry[];
 }
 
 export const APIContext = createContext<APIContextType | undefined>(undefined);

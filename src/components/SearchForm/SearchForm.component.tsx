@@ -7,12 +7,13 @@ export const SearchForm: FunctionComponent<{}> = () => {
 
     const [inputValue, setInputValue] = useState('');
     const [selectedTag, setSelectedTag] = useState('');
+    const [selectedCountry, setSelectedCountry] = useState('gbr');
 
     const apiContext = useContext(APIContext);
     const locationsFilteredContext = useContext(LocationsFilteredContext);
     const activeLocationContext = useContext(ActiveLocationContext);
 
-    const { tags } = useContext(APIContext) || {};
+    const { tags, countries } = useContext(APIContext) || {};
 
     const handleTermChange = (event: ChangeEvent<HTMLInputElement>) => {
         setInputValue(event.target.value);
@@ -20,6 +21,10 @@ export const SearchForm: FunctionComponent<{}> = () => {
 
     const handleTagChange = (event: ChangeEvent<HTMLSelectElement>) => {
         setSelectedTag(event.target.value);
+    };
+
+    const handleCountryChange = (event: ChangeEvent<HTMLSelectElement>) => {
+        setSelectedCountry(event.target.value);
     };
 
     const handleSubmit = (event: SyntheticEvent<HTMLFormElement>) => {
@@ -31,6 +36,9 @@ export const SearchForm: FunctionComponent<{}> = () => {
 
         let filterFunction = (item: APILocation): boolean => {
             if (selectedTag && !item.tags?.includes(selectedTag)) {
+                return false;
+            };
+            if (selectedCountry && item.country !== selectedCountry) {
                 return false;
             };
             if (
@@ -53,9 +61,11 @@ export const SearchForm: FunctionComponent<{}> = () => {
     const handleReset = (e: SyntheticEvent<HTMLButtonElement>) => {
         setInputValue('');
         setSelectedTag('');
-        locationsFilteredContext?.setFilteredLocations(apiContext?.locations || []);
+        setSelectedCountry('gbr');
+        locationsFilteredContext?.setFilteredLocations(
+            apiContext?.locations.filter(loc => loc.country === 'gbr') || []
+        );
     }
-
 
     return (
         <FormEle onSubmit={handleSubmit}>
@@ -88,6 +98,21 @@ export const SearchForm: FunctionComponent<{}> = () => {
                 >
                     <option>Please select:</option>
                     {tags?.map((tag, index) => <option key={index} value={tag.id}>{tag.name}</option>)}
+                </SelectEle>
+            </LabelEle>
+
+            <LabelEle>
+                <LabelTextEle
+                    className="label-text"
+                >
+                    Country:
+                </LabelTextEle>
+                <SelectEle
+                    name="tag"
+                    onChange={handleCountryChange}
+                    value={selectedCountry}
+                >
+                    {countries?.map((country, index) => <option key={index} value={country.id}>{country.name}</option>)}
                 </SelectEle>
             </LabelEle>
 

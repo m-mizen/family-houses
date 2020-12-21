@@ -14,8 +14,8 @@ export const LocationsFilteredProvider: FunctionComponent<{}> = ({ children }) =
     const [filteredLocations, setFilteredLocations] = useState<APILocation[]>(locations);
 
     useEffect(() => {
-        setFilteredLocations(locations);
-    }, [locations, setFilteredLocations])
+        setFilteredLocations(locations.filter(loc => loc.country === 'gbr'));
+    }, [locations, setFilteredLocations]);
 
     return <LocationsFilteredContext.Provider value={{ filteredLocations, setFilteredLocations }}>
         {children}
