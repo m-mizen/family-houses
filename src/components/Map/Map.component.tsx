@@ -1,5 +1,5 @@
 import { FunctionComponent, useState, useRef, useEffect, useContext } from "react";
-import { GoogleMapsContext, LocationsFilteredContext } from "../../context";
+import { GoogleMapsContext, FilteredLocationsContext } from "../../context";
 import { ActiveLocationContext } from "../../context";
 
 import { MapContainer } from './Map.styles';
@@ -7,7 +7,8 @@ import { MapContainer } from './Map.styles';
 export const Map: FunctionComponent<{}> = () => {
 
     const googleMapsContext = useContext(GoogleMapsContext);
-    const { filteredLocations } = useContext(LocationsFilteredContext) || {};
+    const filteredLocations = useContext(FilteredLocationsContext);
+
     const { activeLocation, setActiveLocation } = useContext(ActiveLocationContext) || {};
 
     const [map, setMap] = useState<google.maps.Map | undefined>(undefined);
@@ -80,10 +81,9 @@ export const Map: FunctionComponent<{}> = () => {
 
         markers.forEach((marker, index) => {
             marker.addListener('click', (e) => {
-                if (filteredLocations) {
-                    console.log(filteredLocations[index]);
-                };
-                setActiveLocation && setActiveLocation(filteredLocations[index].id);
+                setActiveLocation && 
+                filteredLocations[index] && 
+                setActiveLocation(filteredLocations[index].id);
             })
         });
 
@@ -107,6 +107,9 @@ export const Map: FunctionComponent<{}> = () => {
         }
 
         const marker = markers[index];
+        if (!marker) {
+            return;
+        }
         const position = marker.getPosition() as google.maps.LatLng;
 
         if (position) {

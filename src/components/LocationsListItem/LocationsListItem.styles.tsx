@@ -20,6 +20,16 @@ export const LocationBtnEle = styled.button<{ active?: boolean }>`
     &:hover, &:focus{
         color: #f2f2f2;
     }
+    &::after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform-origin: 0 0;
+    }
     &::before{
         content: '';
         display: block;
@@ -30,11 +40,30 @@ export const LocationBtnEle = styled.button<{ active?: boolean }>`
         top: 50%;
         border-right: 2px solid currentColor;
         border-bottom: 2px solid currentColor;
-        transition: transform 0.2s;
-        transform:  ${props => props.active ?
-        'translate(-50%, -50%) rotate(45deg)' :
-        'translate(-50%, -50%) rotate(-45deg)'
-    };
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    ${props => props.active &&
+        `
+        &::before{
+            background: #ff7043;
+            transform-origin: 0 0;
+            transform: translate(6px, 4px) rotate(45deg);
+            height: 2px;
+            width: 100%;
+            border: 0;
+            top: 0;
+            left: 0;
+        }
+        &::after{
+            background: #ff7043;
+            transform-origin: 100% 0;
+            transform: translate(-6px, 4px) rotate(-45deg);
+            height: 2px;
+            top: 0;
+            left: 0;
+        }
+        `
     }
 `;
 

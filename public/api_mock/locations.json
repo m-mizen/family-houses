@@ -251,6 +251,16 @@
       "lng": 151.2605094271177,
       "tags": ["mum", "dad"],
       "country": "aus"
+    },
+    {
+      "id": "location-23",
+      "name": "Alexandra Road",
+      "address": "Flat 4 \n22 Alexandra Rd \nReading \nRG1 5PD",
+      "description": "",
+      "lat": 51.4508134,
+      "lng": -0.9530667,
+      "tags": ["mark"],
+      "country": "gbr"
     }
   ]
 }

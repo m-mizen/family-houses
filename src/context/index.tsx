@@ -2,17 +2,20 @@ import { FunctionComponent } from 'react';
 
 import { GoogleMapsProvider } from './google-maps.context';
 import { APIProvider } from './api.context';
-import { LocationsFilteredProvider } from './api-locations-filter.context';
+import { FilteredLocationsProvider } from './filtered-locations.context';
 import { ActiveLocationProvider } from './active-location.context';
+import { FilterProvider } from './filter.context';
 
 export const CombinedProviders: FunctionComponent<{}> = ({ children }) => {
     return <GoogleMapsProvider>
         <APIProvider>
-            <ActiveLocationProvider>
-                <LocationsFilteredProvider>
-                    {children}
-                </LocationsFilteredProvider>
-            </ActiveLocationProvider>
+            <FilterProvider>
+                <FilteredLocationsProvider>
+                    <ActiveLocationProvider>
+                        {children}
+                    </ActiveLocationProvider>
+                </FilteredLocationsProvider>
+            </FilterProvider>
         </APIProvider>
     </GoogleMapsProvider>;
 }
@@ -20,4 +23,5 @@ export const CombinedProviders: FunctionComponent<{}> = ({ children }) => {
 export * from './google-maps.context';
 export * from './active-location.context';
 export * from './api.context';
-export * from './api-locations-filter.context';
+export * from './filtered-locations.context';
+export * from './filter.context';

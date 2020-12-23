@@ -10,11 +10,24 @@ export const LocationsListWrapEle = styled.ul`
 export const LocationsListEle = styled.ul`
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-direction: column;
 `;
 
-export const LocationsListItemEle = styled.li`
+export const LocationsListItemEle = styled.li<{ bringToTop: boolean }>`
     display: block;
     margin: 1em 0;
-    border-left: .2em solid currentColor;
     padding: 0 .5em 0 .3em;
+    flex: 0 0 auto;
+    padding: 0 .5em 0 .3em;
+    ${(props) =>
+        props.bringToTop ?
+            `
+            order: 1;
+            border: 1px solid currentColor;
+            padding: .2em .5em 1em .3em;
+            ` :
+            `order: 2;`
+    }
+    border-left: .2em solid currentColor;
 `;

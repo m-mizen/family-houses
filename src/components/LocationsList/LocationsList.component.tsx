@@ -1,11 +1,12 @@
-import { FunctionComponent, useContext } from 'react';
-import { ActiveLocationContext, APILocation, LocationsFilteredContext } from '../../context';
+import { FunctionComponent, useContext, useEffect, useRef } from 'react';
+import { ActiveLocationContext, APILocation, FilteredLocationsContext } from '../../context';
 import { LocationsListItem } from '../LocationsListItem';
 
 import { LocationsListWrapEle, LocationsListItemEle, LocationsListEle } from './LocationsList.styles';
 
 export const LocationsList: FunctionComponent<{}> = () => {
-    const { filteredLocations } = useContext(LocationsFilteredContext) || {};
+    const locationListRef = useRef<HTMLUListElement>(null);
+    const filteredLocations = useContext(FilteredLocationsContext) || [];
     const { activeLocation, setActiveLocation } = useContext(ActiveLocationContext) || {};
 
     const setActive = (active: string) => {
@@ -15,14 +16,31 @@ export const LocationsList: FunctionComponent<{}> = () => {
         setActiveLocation(active === activeLocation ? undefined : active);
     }
 
+    useEffect(() => {
+        if (!locationListRef.current) {
+            return;
+        }
+        locationListRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+    }, [locationListRef, activeLocation])
+
     return (
-        <LocationsListWrapEle>
+        <LocationsListWrapEle ref={locationListRef}>
             <LocationsListEle>
-                {filteredLocations?.map((location: APILocation) => (
-                    <LocationsListItemEle key={location.id}>
-                        <LocationsListItem isActive={location.id === activeLocation} setActive={() => setActive(location.id)} location={location} />
-                    </LocationsListItemEle>
-                ))}
+                {filteredLocations?.map((location: APILocation) => {
+                    const isActive = location.id === activeLocation;
+                    return (
+                        <LocationsListItemEle
+                            bringToTop={isActive}
+                            key={location.id}
+                        >
+                            <LocationsListItem
+                                isActive={isActive}
+                                setActive={() => setActive(location.id)}
+                                location={location}
+                            />
+                        </LocationsListItemEle>
+                    );
+                })}
             </LocationsListEle>
         </LocationsListWrapEle>
     )
