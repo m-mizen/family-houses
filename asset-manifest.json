@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/family-houses/static/css/main.7f5c2581.chunk.css",
-    "main.js": "/family-houses/static/js/main.88572f25.chunk.js",
-    "main.js.map": "/family-houses/static/js/main.88572f25.chunk.js.map",
+    "main.js": "/family-houses/static/js/main.f9dae413.chunk.js",
+    "main.js.map": "/family-houses/static/js/main.f9dae413.chunk.js.map",
     "runtime-main.js": "/family-houses/static/js/runtime-main.d02afa38.js",
     "runtime-main.js.map": "/family-houses/static/js/runtime-main.d02afa38.js.map",
     "static/js/2.8eefeb09.chunk.js": "/family-houses/static/js/2.8eefeb09.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.d02afa38.js",
     "static/js/2.8eefeb09.chunk.js",
     "static/css/main.7f5c2581.chunk.css",
-    "static/js/main.88572f25.chunk.js"
+    "static/js/main.f9dae413.chunk.js"
   ]
 }
