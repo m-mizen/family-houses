@@ -62,8 +62,8 @@ export const SearchForm: FunctionComponent<{}> = () => {
             payload: selectedCountry
         });
     }, [selectedCountry, filterContext]);
-
-    return (
+    
+    return <>
         <FormEle onSubmit={handleSubmit}>
             <LabelEle>
                 <LabelTextEle
@@ -116,5 +116,5 @@ export const SearchForm: FunctionComponent<{}> = () => {
                 <BtnEle type="reset" onClick={handleReset}>Reset</BtnEle>
             </BtnWrapEle>
         </FormEle>
-    )
+    </>;
 }

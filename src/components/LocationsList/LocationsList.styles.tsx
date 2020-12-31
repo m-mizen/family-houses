@@ -16,10 +16,9 @@ export const LocationsListEle = styled.ul`
 
 export const LocationsListItemEle = styled.li<{ bringToTop: boolean }>`
     display: block;
-    margin: 1em 0;
+    margin: .5em 0;
     padding: 0 .5em 0 .3em;
     flex: 0 0 auto;
-    padding: 0 .5em 0 .3em;
     ${(props) =>
         props.bringToTop ?
             `
