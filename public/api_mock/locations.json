@@ -261,6 +261,46 @@
       "lng": -0.9530667,
       "tags": ["mark"],
       "country": "gbr"
+    },
+    {
+      "id": "location-24",
+      "name": "Slade Park Halls",
+      "address": "Slade Park Halls\nHorspath Driftway\nOxford\nOX3 7FJ",
+      "description": "",
+      "lat": 51.743944,
+      "lng": -1.200000,
+      "tags": ["sean"],
+      "country": "gbr"
+    },
+    {
+      "id": "location-25",
+      "name": "Helen Road",
+      "address": "30 Helen Road\nOxford\nOX2 0DE",
+      "description": "",
+      "lat": 51.753257,
+      "lng": -1.277986,
+      "tags": ["sean"],
+      "country": "gbr"
+    },
+    {
+      "id": "location-26",
+      "name": "Castletown Road",
+      "address": "52 Castletown Road\nLondon\nW14 9HG",
+      "description": "Where the bad lady rents",
+      "lat": 51.488834,
+      "lng": -0.209654,
+      "tags": ["sean"],
+      "country": "gbr"
+    },
+    {
+      "id": "location-27",
+      "name": "Gladstone Court",
+      "address": "Gladstone Court\n49 Fairfax Road\nLondon\nNW6 4EP",
+      "description": "",
+      "lat": 51.543250,
+      "lng": -0.179300,
+      "tags": ["sean"],
+      "country": "gbr"
     }
   ]
 }
