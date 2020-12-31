@@ -4,6 +4,7 @@ import { StoreFinderContainer } from './App.styles';
 import { SearchForm } from '../SearchForm';
 import { LocationsList } from '../LocationsList';
 import { Map } from '../Map';
+import { HideFilter } from '../HideFilter';
 
 import { CombinedProviders } from '../../context';
 
@@ -12,7 +13,9 @@ export const App: FunctionComponent<unknown> = () => {
     <div id="store-finder-app">
       <CombinedProviders>
         <StoreFinderContainer>
-          <SearchForm />
+          <HideFilter>
+            <SearchForm />
+          </HideFilter>
           <Map />
           <LocationsList />
         </StoreFinderContainer>
