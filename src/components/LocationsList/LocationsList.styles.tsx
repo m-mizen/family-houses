@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const LocationsListWrapEle = styled.ul`
+export const LocationsListWrapEle = styled.div`
     overflow-y: auto;
     padding: 0;
     margin: 0;

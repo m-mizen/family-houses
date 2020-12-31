@@ -6,7 +6,7 @@ import { LocationsListItem } from '../LocationsListItem';
 import { LocationsListWrapEle, LocationsListItemEle, LocationsListEle } from './LocationsList.styles';
 
 export const LocationsList: FunctionComponent<{}> = () => {
-    const locationListRef = useRef<HTMLUListElement>(null);
+    const locationListRef = useRef<HTMLDivElement>(null);
     const filteredLocations = useContext(FilteredLocationsContext) || [];
     const { activeLocation, setActiveLocation } = useContext(ActiveLocationContext) || {};
     const isSmallScreen = useMediaQuery({
